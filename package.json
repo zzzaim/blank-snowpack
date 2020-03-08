@@ -1,0 +1,35 @@
+{
+  "name": "blank-node",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zzzaim/blank-node#readme",
+  "bugs": {
+    "url": "https://github.com/zzzaim/blank-node/issues"
+  },
+  "license": "MIT",
+  "private": true,
+  "author": "Zaim Bakar <hi@zaim.works> (https://zbr.works)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzzaim/blank-node.git"
+  },
+  "scripts": {
+    "test": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "prettier": "1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  }
+}
