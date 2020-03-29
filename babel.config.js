@@ -1,4 +1,4 @@
-const pkg = require('./package.json');
+const snowpack = require('./snowpack.config');
 
 module.exports = {
   presets: [
@@ -7,9 +7,6 @@ module.exports = {
     '@babel/preset-typescript'
   ],
   plugins: [
-    [
-      'snowpack/assets/babel-plugin.js',
-      { dir: pkg.snowpack.installOptions.dest }
-    ]
+    ['snowpack/assets/babel-plugin.js', { dir: snowpack.installOptions.dest }]
   ]
 };

@@ -16,10 +16,10 @@
     "test": "npm run lint",
     "lint": "npm run eslint -- .",
     "clean": "rm -rf dist",
-    "build": "npm run lint && npm run snowpack && npm run babel",
+    "build": "run-s test clean snowpack babel",
     "babel": "babel --extensions '.js,.ts,.jsx,.tsx' --out-dir dist main",
     "eslint": "eslint --ext .js,.ts,.jsx,.tsx",
-    "snowpack": "snowpack --optimize --include 'main/**/*.ts'"
+    "snowpack": "snowpack"
   },
   "dependencies": {
     "react": "^16.13.0",
@@ -34,6 +34,7 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "@types/debug": "^4.1.5",
+    "@types/node": "^13.9.5",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "@typescript-eslint/typescript-estree": "^2.25.0",
@@ -46,6 +47,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "1.19.1",
     "snowpack": "^1.6.0",
     "typescript": "^3.8.3",
@@ -56,11 +58,6 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm test",
       "pre-push": "npm test"
-    }
-  },
-  "snowpack": {
-    "installOptions": {
-      "dest": "dist/web_modules"
     }
   }
 }
