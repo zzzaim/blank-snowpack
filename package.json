@@ -15,9 +15,11 @@
   "scripts": {
     "test": "npm run lint",
     "lint": "npm run eslint -- .",
-    "build": "npm run lint && npm run babel",
+    "clean": "rm -rf dist",
+    "build": "npm run lint && npm run snowpack && npm run babel",
     "babel": "babel --extensions '.js,.ts,.jsx,.tsx' --out-dir dist main",
-    "eslint": "eslint --ext .js,.ts,.jsx,.tsx"
+    "eslint": "eslint --ext .js,.ts,.jsx,.tsx",
+    "snowpack": "snowpack --optimize --include 'main/**/*.ts'"
   },
   "dependencies": {
     "react": "^16.13.0",
@@ -31,9 +33,11 @@
     "@babel/preset-typescript": "^7.9.0",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
+    "@types/debug": "^4.1.5",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
     "@typescript-eslint/typescript-estree": "^2.25.0",
+    "debug": "^4.1.1",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
@@ -43,6 +47,7 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "husky": "^4.2.3",
     "prettier": "1.19.1",
+    "snowpack": "^1.6.0",
     "typescript": "^3.8.3",
     "typescript-eslint-language-service": "^2.1.8"
   },
@@ -51,6 +56,11 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "npm test",
       "pre-push": "npm test"
+    }
+  },
+  "snowpack": {
+    "installOptions": {
+      "dest": "dist/web_modules"
     }
   }
 }
