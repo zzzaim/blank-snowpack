@@ -1,16 +1,16 @@
 {
-  "name": "blank-react",
+  "name": "lista-webapp",
   "version": "0.0.1",
-  "homepage": "https://github.com/zzzaim/blank-react#readme",
+  "homepage": "https://github.com/zzzaim/lista-webapp#readme",
   "bugs": {
-    "url": "https://github.com/zzzaim/blank-react/issues"
+    "url": "https://github.com/zzzaim/lista-webapp/issues"
   },
   "license": "MIT",
   "private": true,
   "author": "Zaim Bakar <hi@zaim.works> (https://zbr.works)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zzzaim/blank-react.git"
+    "url": "git+https://github.com/zzzaim/lista-webapp.git"
   },
   "scripts": {
     "test": "npm run lint",
