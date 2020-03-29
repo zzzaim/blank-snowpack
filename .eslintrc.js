@@ -22,7 +22,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
-  ignorePatterns: ['node_modules', '!.*rc.js'],
+  ignorePatterns: ['node_modules', 'dist', '!.*rc.js'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['./tsconfig.json'],
