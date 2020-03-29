@@ -1,0 +1,21 @@
+" localvimrc is awesome!
+" https://github.com/embear/vim-localvimrc
+
+" guard to end loading if it has been loaded for the running vim instance
+if g:localvimrc_sourced_once_for_file
+  finish
+endif
+
+let b:ale_linters = {
+      \ 'typescript': ['tsserver'],
+      \ 'javascript': ['tsserver'],
+      \ 'typescriptreact': ['tsserver'],
+      \ 'javascriptreact': ['tsserver'],
+      \ }
+
+let b:ale_fixers = {
+      \ 'typescript': ['prettier'],
+      \ 'javascript': ['prettier'],
+      \ 'typescriptreact': ['prettier'],
+      \ 'javascriptreact': ['prettier'],
+      \ }
