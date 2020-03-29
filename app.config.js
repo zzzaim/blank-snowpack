@@ -15,6 +15,6 @@ module.exports = {
         content: 'width=device-width, initial-scale=1'
       }
     ],
-    title: 'Lista'
+    title: 'webapp'
   }
 };
