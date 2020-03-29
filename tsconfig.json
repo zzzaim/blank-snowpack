@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "noEmit": true,
+    "plugins": [{ "name": "typescript-eslint-language-service" }],
+    "strict": true,
+    "target": "es2015"
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.js", "**/.*rc.js"]
+}
